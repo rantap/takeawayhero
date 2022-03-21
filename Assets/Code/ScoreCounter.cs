@@ -14,6 +14,6 @@ public class ScoreCounter : MonoBehaviour
     }
     void Update()
     {
-        score.text = "Pisteesi: " + scoreValue.ToString();
+        score.text = scoreValue.ToString();
     }
 }
