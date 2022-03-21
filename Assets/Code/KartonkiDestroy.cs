@@ -10,23 +10,27 @@ public class KartonkiDestroy : MonoBehaviour
     {   
         if(collision.tag == "Bio")
         {
-            //LifeSystem.life -= 1;
+            LifeSystem.life -= 1;
             Destroy(this.gameObject);
         }
         else if(collision.tag == "Muovi")
         {
-            //LifeSystem.life -= 1;
+            LifeSystem.life -= 1;
             Destroy(this.gameObject);
         }
         else if(collision.tag == "Kartonki")
         {
-            //ScoreCounter.scoreValue += 1;
+            ScoreCounter.scoreValue += 1;
             Destroy(this.gameObject);
         }
         else if(collision.tag == "Trashcan")
         {
-            //LifeSystem.life -= 1;
+            LifeSystem.life -= 1;
             Destroy(this.gameObject);
-        }   
+        }
+        else if(collision.tag == "Floor")
+        {
+            Destroy(this.gameObject);
+        }    
     }
 }

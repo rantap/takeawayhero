@@ -9,6 +9,7 @@ TagManager:
   - Bio
   - Muovi
   - Kartonki
+  - Floor
   layers:
   - Default
   - TransparentFX

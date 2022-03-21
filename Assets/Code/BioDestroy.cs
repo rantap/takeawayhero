@@ -10,22 +10,26 @@ public class BioDestroy : MonoBehaviour
     {  
         if(collision.tag == "Bio")
         {
-            //ScoreCounter.scoreValue += 1;
+            ScoreCounter.scoreValue += 1;
             Destroy(this.gameObject);
         }
         else if(collision.tag == "Muovi")
         {
-            //LifeSystem.life -= 1;
+            LifeSystem.life -= 1;
             Destroy(this.gameObject);
         }
         else if(collision.tag == "Kartonki")
         {
-            //LifeSystem.life -= 1;
+            LifeSystem.life -= 1;
             Destroy(this.gameObject);
         }
         else if(collision.tag == "Trashcan")
         {
-            //LifeSystem.life -= 1;
+            LifeSystem.life -= 1;
+            Destroy(this.gameObject);
+        }
+        else if(collision.tag == "Floor")
+        {
             Destroy(this.gameObject);
         }   
     }
