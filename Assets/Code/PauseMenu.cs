@@ -24,5 +24,8 @@ public class PauseMenu : MonoBehaviour
     public void QuitGame()
     {
         SceneManager.LoadScene(1);
+        LifeSystem.life = 3;
+        TotalScore.totalScore = ScoreCounter.scoreValue;
+        ScoreCounter.scoreValue = 0;
     }
 }
