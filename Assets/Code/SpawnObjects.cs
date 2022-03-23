@@ -18,6 +18,9 @@ public class SpawnObjects : MonoBehaviour
    private GameObject randomSpawn;
    private GameObject spawnedObject;
    private int i;
+   
+   
+
 
     void Start()
     {

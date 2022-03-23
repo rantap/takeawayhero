@@ -38,7 +38,8 @@ public class GrabObject : MonoBehaviour
                     grabbedObject.transform.parent = transform;
                     if(grabbedObject.GetComponent<Rigidbody2D>()) {
                     grabbedObject.GetComponent<Rigidbody2D>().simulated = false;
-                        grabbedObject.GetComponent<MoveObject>().objectSpeed = 0;
+                    Destroy(grabbedObject.GetComponent<MoveObject>());
+                        //grabbedObject.GetComponent<MoveObject>().objectSpeed = 0;
                     }
                 }
             }
@@ -47,7 +48,7 @@ public class GrabObject : MonoBehaviour
                 grabbedObject.transform.parent = null;
                 if(grabbedObject.GetComponent<Rigidbody2D>()) {
                     grabbedObject.GetComponent<Rigidbody2D>().simulated = true;
-                    grabbedObject.GetComponent<MoveObject>().objectSpeed = 0;
+                    //grabbedObject.GetComponent<MoveObject>().objectSpeed = 0;
                     grabbedObject = null;
                 }
             }
