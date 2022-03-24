@@ -31,5 +31,20 @@ public class MuoviDestroy : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+        else if(collision.tag == "pakkausKartonki")
+        {
+            LifeSystem.life -= 1;
+            Destroy(this.gameObject);
+        }
+        else if(collision.tag == "pakkausKeitto")
+        {
+            LifeSystem.life -= 1;
+            Destroy(this.gameObject);
+        }
+        else if(collision.tag == "pakkausVaahto")
+        {
+            LifeSystem.life -= 1;
+            Destroy(this.gameObject);
+        }
     }
 }

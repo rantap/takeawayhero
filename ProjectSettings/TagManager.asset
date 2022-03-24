@@ -10,6 +10,9 @@ TagManager:
   - Muovi
   - Kartonki
   - Floor
+  - pakkausKartonki
+  - pakkausVaahto
+  - pakkausKeitto
   layers:
   - Default
   - TransparentFX

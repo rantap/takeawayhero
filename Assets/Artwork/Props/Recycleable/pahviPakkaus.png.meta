@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d9af2aea5764e1044b63453599c2a4bb
+guid: 5ff8a27463988194bb42fe19ea870f03
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4285424052190007917
-    second: salaattiFood
+      213: 7310820089862213705
+    second: pahviPakkaus
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -106,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: salaattiFood
+      name: pahviPakkaus
       rect:
         serializedVersion: 2
-        x: 3
-        y: 3
+        x: 9
+        y: 5
         width: 53
-        height: 30
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -120,8 +120,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d6253b66872e87b30800000000000000
-      internalID: 4285424052190007917
+      spriteID: 940d6092320457560800000000000000
+      internalID: 7310820089862213705
       vertices: []
       indices: 
       edges: []
