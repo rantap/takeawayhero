@@ -32,6 +32,6 @@ public class LifeSystem : MonoBehaviour
     }
     public void GameOver()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 }
