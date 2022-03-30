@@ -27,8 +27,22 @@ public class SpawnObjects : MonoBehaviour
    private GameObject GameObject8;
    [SerializeField, Tooltip("A reference to the prefab we want to create copies from")]
    private GameObject GameObject9;
+   [SerializeField, Tooltip("A reference to the prefab we want to create copies from")]
+   private GameObject GameObject10;
+   [SerializeField, Tooltip("A reference to the prefab we want to create copies from")]
+   private GameObject GameObject11;
+   [SerializeField, Tooltip("A reference to the prefab we want to create copies from")]
+   private GameObject GameObject12;
+   [SerializeField, Tooltip("A reference to the prefab we want to create copies from")]
+   private GameObject GameObject13;
+   [SerializeField, Tooltip("A reference to the prefab we want to create copies from")]
+   private GameObject GameObject14;
+   [SerializeField, Tooltip("A reference to the prefab we want to create copies from")]
+   private GameObject GameObject15;
+
    private GameObject randomSpawn;
    private GameObject spawnedObject;
+   private float spawnSpeedTimer = 30;
    private int i;
    
    
@@ -51,10 +65,23 @@ public class SpawnObjects : MonoBehaviour
                 resetTimer();
             }
         }
+        if (spawnTime > 5)
+        {
+            if(spawnSpeedTimer > 0)
+            {
+                spawnSpeedTimer -= Time.deltaTime;
+                
+                if(spawnSpeedTimer < 0)
+                {
+                   spawnTime -= 1;
+                   spawnSpeedTimer = 20f; 
+                }  
+            }
+        }
     }
     private void Spawn()
     {
-        i = Random.Range(1, 10);
+        i = Random.Range(1, 16);
         if(i == 1) {
             randomSpawn = GameObject1;
         } else if (i == 2) {
@@ -73,6 +100,18 @@ public class SpawnObjects : MonoBehaviour
             randomSpawn = GameObject8;
         } else if (i == 9) {
             randomSpawn = GameObject9;
+        } else if (i == 10) {
+            randomSpawn = GameObject10;
+        } else if (i == 11) {
+            randomSpawn = GameObject11;
+        } else if (i == 12) {
+            randomSpawn = GameObject12;
+        } else if (i == 13) {
+            randomSpawn = GameObject13;
+        } else if (i == 14) {
+            randomSpawn = GameObject14;
+        } else if (i == 15) {
+            randomSpawn = GameObject15;
         }
         //TODO: Spawn object to scene!
         spawnedObject = Instantiate(randomSpawn, transform.position, transform.rotation);
