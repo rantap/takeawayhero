@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyMover : MonoBehaviour
 {
     public Transform player;
-    public float moveSpeed = 5f;
+    public float moveSpeed = 1f;
     private Rigidbody2D rb;
     private Vector2 movement;
 
@@ -37,5 +37,17 @@ public class EnemyMover : MonoBehaviour
     void moveCharacter(Vector2 direction)
     {
         rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "Player")
+        {
+            StartCoroutine(StopMovement());
+        }
+    }
+    IEnumerator StopMovement() {
+        moveSpeed = 0f;
+        yield return new WaitForSeconds(3f);
+        moveSpeed = 1f;
     }
 }

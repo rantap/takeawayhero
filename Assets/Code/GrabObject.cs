@@ -55,4 +55,21 @@ public class GrabObject : MonoBehaviour
         }
         Debug.DrawRay(Detect.position, Vector2.right * rayDistance * transform.localScale, Color.red);
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {   
+        if(grabbedObject != null)
+        {
+            if(collision.tag == "Enemy")
+            {
+                Destroy(this.grabbedObject);
+                
+                //grabbedObject.transform.parent = null;
+                //if(grabbedObject.GetComponent<Rigidbody2D>()) {
+                //    grabbedObject.GetComponent<Rigidbody2D>().simulated = true;
+                //    //grabbedObject.GetComponent<MoveObject>().objectSpeed = 0;
+                //    grabbedObject = null;
+                //}
+            }
+        }
+    }
 }

@@ -6,7 +6,7 @@ public class SpeedTimer : MonoBehaviour
 {
     
     private float ResetTimer;
-    private float TimerForSpeed = 15;
+    private float TimerForSpeed = 30;
     
     
 
@@ -19,7 +19,7 @@ public class SpeedTimer : MonoBehaviour
         TimerForSpeed -= Time.deltaTime;
         if(TimerForSpeed < 0)
         {
-            MoveObject.objectSpeed += 0.2f;
+            MoveObject.objectSpeed += 0.1f;
             TimerForSpeed = ResetTimer;
         }
     }

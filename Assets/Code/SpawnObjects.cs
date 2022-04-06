@@ -39,10 +39,12 @@ public class SpawnObjects : MonoBehaviour
    private GameObject GameObject14;
    [SerializeField, Tooltip("A reference to the prefab we want to create copies from")]
    private GameObject GameObject15;
+   [SerializeField, Tooltip("A reference to the prefab we want to create copies from")]
+   private GameObject GameObject16;
 
    private GameObject randomSpawn;
    private GameObject spawnedObject;
-   private float spawnSpeedTimer = 30;
+   private float spawnSpeedTimer = 20;
    private int i;
    
    
@@ -65,7 +67,7 @@ public class SpawnObjects : MonoBehaviour
                 resetTimer();
             }
         }
-        if (spawnTime > 5)
+        if (spawnTime > 4)
         {
             if(spawnSpeedTimer > 0)
             {
@@ -81,7 +83,7 @@ public class SpawnObjects : MonoBehaviour
     }
     private void Spawn()
     {
-        i = Random.Range(1, 16);
+        i = Random.Range(1, 17);
         if(i == 1) {
             randomSpawn = GameObject1;
         } else if (i == 2) {
@@ -112,6 +114,8 @@ public class SpawnObjects : MonoBehaviour
             randomSpawn = GameObject14;
         } else if (i == 15) {
             randomSpawn = GameObject15;
+        } else if (i == 16) {
+            randomSpawn = GameObject16;
         }
         //TODO: Spawn object to scene!
         spawnedObject = Instantiate(randomSpawn, transform.position, transform.rotation);

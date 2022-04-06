@@ -13,6 +13,7 @@ TagManager:
   - pakkausKartonki
   - pakkausVaahto
   - pakkausKeitto
+  - Enemy
   layers:
   - Default
   - TransparentFX
