@@ -5,14 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class GameOverController : MonoBehaviour
 {
-    // Start is called before the first frame update
-
     public void StartGame()
     {
         SceneManager.LoadScene(1);
         Time.timeScale = 1f;
     }
-        public void BackToMenu()
+    public void BackToMenu()
     {
         SceneManager.LoadScene(0);
         Time.timeScale = 1f;

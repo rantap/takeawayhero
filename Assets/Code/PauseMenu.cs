@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    [SerializeField] GameObject pauseMenu;
+    [SerializeField]
+    GameObject pauseMenu;
 
     public void Pause()
     {
@@ -20,6 +21,9 @@ public class PauseMenu : MonoBehaviour
     public void BackToMenu()
     {
         SceneManager.LoadScene(0);
+        LifeSystem.life = 3;
+        TotalScore.totalScore = ScoreCounter.scoreValue;
+        ScoreCounter.scoreValue = 0;
     }
     public void QuitGame()
     {

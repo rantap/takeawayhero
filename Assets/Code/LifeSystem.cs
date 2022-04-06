@@ -12,10 +12,10 @@ public class LifeSystem : MonoBehaviour
     {
         if (life == 0)
         {
-        GameOver();
-        life = 3;
-        TotalScore.totalScore = ScoreCounter.scoreValue;
-        ScoreCounter.scoreValue = 0;
+            GameOver();
+            life = 3;
+            TotalScore.totalScore = ScoreCounter.scoreValue;
+            ScoreCounter.scoreValue = 0;
         }
         if (life < 1)
         {

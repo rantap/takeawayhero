@@ -12,6 +12,10 @@ public class StartMenuController : MonoBehaviour
         SceneManager.LoadScene(1);
         Time.timeScale = 1f;
     }
+    public void LoadInstructions()
+    {
+        SceneManager.LoadScene(3);
+    }
     public void QuitGame()
     {
         print("Quit Game!");
