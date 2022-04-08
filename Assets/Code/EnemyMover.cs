@@ -7,12 +7,14 @@ public class EnemyMover : MonoBehaviour
     public Transform player;
     public float moveSpeed = 1f;
     private Rigidbody2D rb;
+    private Animator animator;
     private Vector2 movement;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -33,6 +35,7 @@ public class EnemyMover : MonoBehaviour
     private void FixedUpdate() 
     {
         moveCharacter(movement);
+        UpdateAnimator();
     }
     void moveCharacter(Vector2 direction)
     {
@@ -49,5 +52,11 @@ public class EnemyMover : MonoBehaviour
         moveSpeed = 0f;
         yield return new WaitForSeconds(3f);
         moveSpeed = 1f;
+    }
+    private void UpdateAnimator()
+    {
+        animator.SetFloat("speed", moveSpeed);
+        animator.SetFloat("horizontal", movement.x);
+        animator.SetFloat("vertical", movement.y);
     }
 }

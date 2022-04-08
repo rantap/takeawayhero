@@ -64,9 +64,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.013955114
+  m_TransitionDuration: 0.15158573
   m_TransitionOffset: 0
-  m_ExitTime: 0.000000075921314
+  m_ExitTime: 0.000000018041186
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -103,7 +103,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Player
+  m_Name: Opossum
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: speed
@@ -154,9 +154,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.000000014901161
-  m_TransitionOffset: 6.666965
-  m_ExitTime: 0.7500001
+  m_TransitionDuration: 0.09449022
+  m_TransitionOffset: 0
+  m_ExitTime: 0.0000000036509882
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -169,7 +169,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Player_Idle
+  m_Name: Opossum_idle
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -183,7 +183,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 32c9292bef3ad8447b8f2d20e16e9b04, type: 2}
+  m_Motion: {fileID: 7400000, guid: c996a9e7e591a614dad33dafe17e097f, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -210,7 +210,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -6199987207994279456}
+  m_Motion: {fileID: 7400000, guid: 10b4fb865226f9544b1153ced4a34719, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

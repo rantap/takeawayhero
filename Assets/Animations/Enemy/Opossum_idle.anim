@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Enemy_left
+  m_Name: Opossum_idle
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,14 +20,12 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: 28be5c7db38484f4e8006849c4524b8b, type: 3}
-    - time: 0.2
-      value: {fileID: 21300000, guid: 69559a3a07c067d449f63654b9d14a6e, type: 3}
+      value: {fileID: 21300000, guid: da642cba5756ab4419babc6200fb5d21, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 10
+  m_SampleRate: 8
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -42,14 +40,13 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: 28be5c7db38484f4e8006849c4524b8b, type: 3}
-    - {fileID: 21300000, guid: 69559a3a07c067d449f63654b9d14a6e, type: 3}
+    - {fileID: 21300000, guid: da642cba5756ab4419babc6200fb5d21, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.3
+    m_StopTime: 0.125
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
