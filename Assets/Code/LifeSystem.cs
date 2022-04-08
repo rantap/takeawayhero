@@ -13,9 +13,6 @@ public class LifeSystem : MonoBehaviour
         if (life == 0)
         {
             GameOver();
-            life = 3;
-            TotalScore.totalScore = ScoreCounter.scoreValue;
-            ScoreCounter.scoreValue = 0;
         }
         if (life < 1)
         {
@@ -33,5 +30,9 @@ public class LifeSystem : MonoBehaviour
     public void GameOver()
     {
         SceneManager.LoadScene(2);
+        life = 3;
+        TotalScore.totalScore = ScoreCounter.scoreValue;
+        ScoreCounter.scoreValue = 0;
+        MoveObject.objectSpeed = 0.2f;
     }
 }

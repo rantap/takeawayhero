@@ -24,6 +24,7 @@ public class PauseMenu : MonoBehaviour
         LifeSystem.life = 3;
         TotalScore.totalScore = ScoreCounter.scoreValue;
         ScoreCounter.scoreValue = 0;
+        MoveObject.objectSpeed = 0.2f;
     }
     public void QuitGame()
     {
@@ -31,5 +32,6 @@ public class PauseMenu : MonoBehaviour
         LifeSystem.life = 3;
         TotalScore.totalScore = ScoreCounter.scoreValue;
         ScoreCounter.scoreValue = 0;
+        MoveObject.objectSpeed = 0.2f;
     }
 }
