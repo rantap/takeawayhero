@@ -67,7 +67,7 @@ public class SpawnObjects : MonoBehaviour
                 resetTimer();
             }
         }
-        if (spawnTime > 4)
+        if (spawnTime > 5)
         {
             if(spawnSpeedTimer > 0)
             {

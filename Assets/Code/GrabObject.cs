@@ -62,6 +62,7 @@ public class GrabObject : MonoBehaviour
             if(collision.tag == "Enemy")
             {
                 Destroy(this.grabbedObject);
+                LifeSystem.life -= 1;
                 
                 //grabbedObject.transform.parent = null;
                 //if(grabbedObject.GetComponent<Rigidbody2D>()) {

@@ -19,7 +19,7 @@ public class SpeedTimer : MonoBehaviour
         TimerForSpeed -= Time.deltaTime;
         if(TimerForSpeed < 0)
         {
-            MoveObject.objectSpeed += 0.1f;
+            //MoveObject.objectSpeed += 0.1f;
             TimerForSpeed = ResetTimer;
         }
     }
