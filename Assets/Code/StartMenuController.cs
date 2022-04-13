@@ -14,7 +14,7 @@ public class StartMenuController : MonoBehaviour
     }
     public void LoadInstructions()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(4);
     }
     public void QuitGame()
     {

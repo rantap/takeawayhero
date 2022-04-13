@@ -394,6 +394,8 @@ MonoBehaviour:
   - {fileID: 1251227345}
   - {fileID: 1919369212}
   - {fileID: 80562076}
+  backButton: {fileID: 366344407}
+  forwardButton: {fileID: 358802684}
 --- !u!114 &239953558
 MonoBehaviour:
   m_ObjectHideFlags: 0

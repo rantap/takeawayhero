@@ -7,8 +7,31 @@ public class InstructionController : MonoBehaviour
 {     
     [SerializeField]
     GameObject [] pages; 
+    [SerializeField] 
+    GameObject backButton;
+    [SerializeField] 
+    GameObject forwardButton;
     int i = 0;
 
+    public void Update()
+    {
+        if (i == 0)
+        {
+            backButton.SetActive(false);
+        }
+        if (i == 1)
+        {   
+            backButton.SetActive(true);
+        }
+        if (i == pages.Length - 1)
+        {
+            forwardButton.SetActive(false);
+        }
+        if (i == pages.Length - 2)
+        { 
+            forwardButton.SetActive(true);
+        }
+    }
     public void Exit()
     {
         SceneManager.LoadScene(0);
