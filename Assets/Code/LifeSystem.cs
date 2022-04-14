@@ -29,7 +29,7 @@ public class LifeSystem : MonoBehaviour
     }
     public void GameOver()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
         life = 3;
         TotalScore.totalScore = ScoreCounter.scoreValue;
         ScoreCounter.scoreValue = 0;
