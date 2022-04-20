@@ -849,6 +849,7 @@ GameObject:
   - component: {fileID: 1428266027}
   - component: {fileID: 1428266031}
   - component: {fileID: 1428266032}
+  - component: {fileID: 1428266033}
   m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
@@ -990,6 +991,23 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1428266033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1428266026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74c9a0d9542a9b8449c8b4ecf31b8c25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tempScore: 0
+  newScore: 0
+  highScore_1: 0
+  highScore_2: 0
+  highScore_3: 0
 --- !u!1 &1759401787
 GameObject:
   m_ObjectHideFlags: 0
