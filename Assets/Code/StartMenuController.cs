@@ -1,12 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class StartMenuController : MonoBehaviour
 {
-    // Start is called before the first frame update
-
+    [SerializeField]
+    Toggle Toggle;
+    public void Awake()
+    {
+        if (AudioListener.pause)
+        {
+            Toggle.isOn = true;
+        }
+        else
+        {
+            Toggle.isOn = false;
+        }
+    }
     public void StartGame()
     {
         SceneManager.LoadScene(1);
