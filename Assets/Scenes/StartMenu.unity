@@ -836,7 +836,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2047291170}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: MutePressed
+        m_MethodName: ToggleMusic
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1695,7 +1695,7 @@ AudioSource:
   m_GameObject: {fileID: 1507097923}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -5286859614925630738, guid: e2b5bb02ddf8f1e40a6397daa5bcb174, type: 2}
   m_audioClip: {fileID: 8300000, guid: c599244bf5696cc47a8ee15fea3dfa7e, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.5
@@ -1968,7 +1968,19 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2047291170}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: ToggleSFX
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 0
 --- !u!114 &1644719412
 MonoBehaviour:
@@ -2152,8 +2164,8 @@ GameObject:
   - component: {fileID: 2047291167}
   - component: {fileID: 2047291166}
   - component: {fileID: 2047291165}
-  - component: {fileID: 2047291169}
   - component: {fileID: 2047291170}
+  - component: {fileID: 2047291169}
   m_Layer: 5
   m_Name: StartMenu
   m_TagString: Untagged
@@ -2255,7 +2267,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c8aaba40b4cd8346a27aac9a8edb9a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Toggle: {fileID: 498309399}
+  musicToggle: {fileID: 498309399}
+  soundToggle: {fileID: 1644719411}
 --- !u!114 &2047291170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2268,5 +2281,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 928efe63ecba4b64fa53ea8f1d82ef2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Toggle: {fileID: 498309399}
-  isMuted: 0
+  audioMixer: {fileID: 24100000, guid: e2b5bb02ddf8f1e40a6397daa5bcb174, type: 2}
+  musicToggle: {fileID: 498309399}
+  soundToggle: {fileID: 1644719411}

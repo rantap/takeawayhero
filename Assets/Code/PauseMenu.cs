@@ -9,20 +9,26 @@ public class PauseMenu : MonoBehaviour
     [SerializeField]
     GameObject pauseMenu;
     [SerializeField]
-    Toggle Toggle;
-    public bool isMuted;
-
+    Toggle musicToggle;
+    [SerializeField]
+    Toggle soundToggle;
     public void Awake()
     {
-        if (AudioListener.pause)
+        if (!AudioManager.musicOn)
         {
-            Toggle.isOn = true;
-            isMuted = true;
+            musicToggle.isOn = true;
         }
         else
         {
-            Toggle.isOn = false;
-            isMuted = false;
+            musicToggle.isOn = false;
+        }
+        if (!AudioManager.soundOn)
+        {
+            soundToggle.isOn = true;
+        }
+        else
+        {
+            soundToggle.isOn = false;
         }
     }
     public void Pause()
@@ -50,10 +56,5 @@ public class PauseMenu : MonoBehaviour
         TotalScore.totalScore = ScoreCounter.scoreValue;
         ScoreCounter.scoreValue = 0;
         MoveObject.objectSpeed = 0.2f;
-    }
-    public void MutePressed()
-    {
-        isMuted = !isMuted;
-        AudioListener.pause = isMuted;
     }
 }

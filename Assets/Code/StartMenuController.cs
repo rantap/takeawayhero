@@ -7,16 +7,26 @@ using UnityEngine.SceneManagement;
 public class StartMenuController : MonoBehaviour
 {
     [SerializeField]
-    Toggle Toggle;
+    Toggle musicToggle;
+    [SerializeField]
+    Toggle soundToggle;
     public void Awake()
     {
-        if (AudioListener.pause)
+        if (!AudioManager.musicOn)
         {
-            Toggle.isOn = true;
+            musicToggle.isOn = true;
         }
-        else
+        else 
         {
-            Toggle.isOn = false;
+            musicToggle.isOn = false;
+        }
+        if (!AudioManager.soundOn)
+        {
+            soundToggle.isOn = true;
+        }
+        else 
+        {
+            soundToggle.isOn = false;
         }
     }
     public void StartGame()
