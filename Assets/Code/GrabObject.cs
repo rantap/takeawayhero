@@ -17,6 +17,10 @@ public class GrabObject : MonoBehaviour
     private float rayDistance;
     private Rigidbody2D rb;
     private GameObject grabbedObject;
+    [SerializeField]
+    private AudioSource audioSource;
+    [SerializeField]
+    private AudioClip losePoint;
 
 
 
@@ -63,6 +67,7 @@ public class GrabObject : MonoBehaviour
             {
                 Destroy(this.grabbedObject);
                 LifeSystem.life -= 1;
+                audioSource.PlayOneShot(losePoint);
                 
                 //grabbedObject.transform.parent = null;
                 //if(grabbedObject.GetComponent<Rigidbody2D>()) {

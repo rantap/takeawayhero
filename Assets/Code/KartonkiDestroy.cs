@@ -4,29 +4,36 @@ using UnityEngine;
 
 public class KartonkiDestroy : MonoBehaviour
 {
+    public AudioSource audioSource;
+    public AudioSource audioSource2;
+    public AudioClip getPoint;
+    public AudioClip losePoint;
+    private SpriteRenderer rend;
 
-
+    void Awake()
+    {
+        rend = GetComponent<SpriteRenderer>();
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {   
         if(collision.tag == "Bio")
         {
-            LifeSystem.life -= 1;
-            Destroy(this.gameObject);
+            LosePoint();
         }
         else if(collision.tag == "Muovi")
         {
-            LifeSystem.life -= 1;
-            Destroy(this.gameObject);
+            LosePoint();
         }
         else if(collision.tag == "Kartonki")
         {
             ScoreCounter.scoreValue += 1;
-            Destroy(this.gameObject);
+            audioSource.PlayOneShot(getPoint);
+            rend.enabled = false;
+            Destroy(this.gameObject, getPoint.length);
         }
         else if(collision.tag == "Trashcan")
         {
-            LifeSystem.life -= 1;
-            Destroy(this.gameObject);
+            LosePoint();
         }
         else if(collision.tag == "Floor")
         {
@@ -34,18 +41,22 @@ public class KartonkiDestroy : MonoBehaviour
         }
         else if(collision.tag == "pakkausKartonki")
         {
-            LifeSystem.life -= 1;
-            Destroy(this.gameObject);
+            LosePoint();
         }
         else if(collision.tag == "pakkausKeitto")
         {
-            LifeSystem.life -= 1;
-            Destroy(this.gameObject);
+            LosePoint();
         }
         else if(collision.tag == "pakkausVaahto")
         {
-            LifeSystem.life -= 1;
-            Destroy(this.gameObject);
+            LosePoint();
         }    
+    }
+    void LosePoint()
+    {
+        LifeSystem.life -= 1;
+        audioSource.PlayOneShot(losePoint);
+        rend.enabled = false;
+        Destroy(this.gameObject, losePoint.length);
     }
 }

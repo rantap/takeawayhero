@@ -7,7 +7,7 @@ public class LifeSystem : MonoBehaviour
 {
     public GameObject [] lives;
     public static int life = 3;
- 
+
     void Update()
     {
         if (life == 0)
