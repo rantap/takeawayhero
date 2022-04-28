@@ -16,20 +16,20 @@ public class KartonkiDestroy : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {   
-        if(collision.tag == "Bio")
+        if(collision.tag == "Kartonki")
+        {
+            ScoreCounter.scoreValue += 1;
+            audioSource.PlayOneShot(getPoint);
+            rend.enabled = false;
+            Destroy(this.gameObject, getPoint.length);
+        }
+        else if(collision.tag == "Bio")
         {
             LosePoint();
         }
         else if(collision.tag == "Muovi")
         {
             LosePoint();
-        }
-        else if(collision.tag == "Kartonki")
-        {
-            ScoreCounter.scoreValue += 1;
-            audioSource.PlayOneShot(getPoint);
-            rend.enabled = false;
-            Destroy(this.gameObject, getPoint.length);
         }
         else if(collision.tag == "Trashcan")
         {

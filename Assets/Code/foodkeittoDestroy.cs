@@ -16,7 +16,14 @@ public class foodkeittoDestroy : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {  
-        if(collision.tag == "Bio")
+        if(collision.tag == "pakkausKeitto")
+        {
+            ScoreCounter.scoreValue += 1;
+            audioSource.PlayOneShot(getPoint);
+            rend.enabled = false;
+            Destroy(this.gameObject, getPoint.length);
+        }
+        else if(collision.tag == "Bio")
         {
             LosePoint();
         }
@@ -39,13 +46,6 @@ public class foodkeittoDestroy : MonoBehaviour
         else if(collision.tag == "pakkausKartonki")
         {
             LosePoint();
-        }
-        else if(collision.tag == "pakkausKeitto")
-        {
-            ScoreCounter.scoreValue += 1;
-            audioSource.PlayOneShot(getPoint);
-            rend.enabled = false;
-            Destroy(this.gameObject, getPoint.length);
         }
         else if(collision.tag == "pakkausVaahto")
         {

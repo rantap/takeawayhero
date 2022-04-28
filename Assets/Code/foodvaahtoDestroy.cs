@@ -16,7 +16,14 @@ public class foodvaahtoDestroy : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {  
-        if(collision.tag == "Bio")
+        if(collision.tag == "pakkausVaahto")
+        {
+            ScoreCounter.scoreValue += 1;
+            audioSource.PlayOneShot(getPoint);
+            rend.enabled = false;
+            Destroy(this.gameObject, getPoint.length);
+        }   
+        else if(collision.tag == "Bio")
         {
             LosePoint();
         }
@@ -44,13 +51,6 @@ public class foodvaahtoDestroy : MonoBehaviour
         {
             LosePoint();
         }
-        else if(collision.tag == "pakkausVaahto")
-        {
-            ScoreCounter.scoreValue += 1;
-            audioSource.PlayOneShot(getPoint);
-            rend.enabled = false;
-            Destroy(this.gameObject, getPoint.length);
-        }   
     }
     void LosePoint()
     {
