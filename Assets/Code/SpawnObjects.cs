@@ -44,7 +44,7 @@ public class SpawnObjects : MonoBehaviour
 
    private GameObject randomSpawn;
    private GameObject spawnedObject;
-   private float spawnSpeedTimer = 20;
+   private float spawnSpeedTimer = 75f;
    private int i;
    
    
@@ -67,16 +67,16 @@ public class SpawnObjects : MonoBehaviour
                 resetTimer();
             }
         }
-        if (spawnTime > 5)
+        if (spawnTime > 6f)
         {
-            if(spawnSpeedTimer > 0)
+            if(spawnSpeedTimer > 0f)
             {
                 spawnSpeedTimer -= Time.deltaTime;
                 
-                if(spawnSpeedTimer < 0)
+                if(spawnSpeedTimer <= 0f)
                 {
                    spawnTime -= 1;
-                   spawnSpeedTimer = 20f; 
+                   spawnSpeedTimer = 60f; 
                 }  
             }
         }
@@ -120,14 +120,6 @@ public class SpawnObjects : MonoBehaviour
         //TODO: Spawn object to scene!
         spawnedObject = Instantiate(randomSpawn, transform.position, transform.rotation);
     }
-    //private void OnTriggerEnter2D(Collider2D collision)
-    //{
-    //    if(collision.tag == "Trashcan")
-    //    {
-    //        Destroy(spawnedObject);
-    //        spawnedObject = null;
-    //    }   
-    //}
     private void resetTimer()
     {
         timer = spawnTime + Random.Range(-timerOffset, timerOffset);

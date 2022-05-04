@@ -112,7 +112,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.8465924, y: 2.1063306}
+  m_Size: {x: 3.8465924, y: 2.045}
   m_EdgeRadius: 0
 --- !u!50 &-1433432690364721143
 Rigidbody2D:
