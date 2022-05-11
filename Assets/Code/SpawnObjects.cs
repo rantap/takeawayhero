@@ -44,7 +44,7 @@ public class SpawnObjects : MonoBehaviour
 
    private GameObject randomSpawn;
    private GameObject spawnedObject;
-   private float spawnSpeedTimer = 75f;
+   private float spawnSpeedTimer = 60f;
    private int i;
    
    

@@ -18,22 +18,6 @@ public class HighscorePrint : MonoBehaviour
     [SerializeField] 
     public TextMeshProUGUI highScoreGUI3;
     
-    // Start is called before the first frame update
-    //void Start()
-    //{
-    //    highScore_1 = PlayerPrefs.GetInt("highScore_1", 0);
-    //    highScore_2 = PlayerPrefs.GetInt("highScore_2", 0);
-    //    highScore_3 = PlayerPrefs.GetInt("highScore_3", 0);
-    //    //highScoreGUI = GetComponent<TextMeshProUGUI>();
-    //}    
-//
-    //// Update is called once per frame
-    //void Update()
-    //{
-    //    
-    //    //highScoreGUI.text = "test";
-//
-    //}
         
     public void LoadHighscore()
     {

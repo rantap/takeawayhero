@@ -43,7 +43,7 @@ public class GrabObject : MonoBehaviour
                     if(grabbedObject.GetComponent<Rigidbody2D>()) {
                     grabbedObject.GetComponent<Rigidbody2D>().simulated = false;
                     Destroy(grabbedObject.GetComponent<MoveObject>());
-                        //grabbedObject.GetComponent<MoveObject>().objectSpeed = 0;
+                        
                     }
                 }
             }
@@ -52,7 +52,7 @@ public class GrabObject : MonoBehaviour
                 grabbedObject.transform.parent = null;
                 if(grabbedObject.GetComponent<Rigidbody2D>()) {
                     grabbedObject.GetComponent<Rigidbody2D>().simulated = true;
-                    //grabbedObject.GetComponent<MoveObject>().objectSpeed = 0;
+                    
                     grabbedObject = null;
                 }
             }
@@ -69,12 +69,6 @@ public class GrabObject : MonoBehaviour
                 LifeSystem.life -= 1;
                 audioSource.PlayOneShot(losePoint);
                 
-                //grabbedObject.transform.parent = null;
-                //if(grabbedObject.GetComponent<Rigidbody2D>()) {
-                //    grabbedObject.GetComponent<Rigidbody2D>().simulated = true;
-                //    //grabbedObject.GetComponent<MoveObject>().objectSpeed = 0;
-                //    grabbedObject = null;
-                //}
             }
         }
     }
